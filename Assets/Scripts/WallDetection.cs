@@ -3,20 +3,16 @@ using UnityEngine;
 
 public class WallDetection : CollisionDetection
 {
-    public event Action CollidedWithWall = delegate { };
+    public event Action Collided = delegate { };
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            FlipCollider();
+        foreach (string tag in tagsThatCollide)
+            if (collision.gameObject.tag == tag)
+            {
+                Collided();
 
-            CollidedWithWall();
-        }
-    }
-
-    protected override void FlipCollider()
-    {
-        transform.GetComponent<BoxCollider2D>().offset *= -1f;
+                return;
+            }
     }
 }

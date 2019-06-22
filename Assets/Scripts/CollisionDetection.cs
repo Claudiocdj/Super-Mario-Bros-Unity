@@ -1,9 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public abstract class CollisionDetection : MonoBehaviour
 {
-    protected string[] tagsThatCollide = new string[] { "Ground", "Enemy" };
-    
-    protected abstract void FlipCollider();
+    public string[] tagsThatCollide;
+
+    public event Action Collided = delegate { };
+
+    protected void OnCollision(GameObject other)
+    {
+        foreach (string tag in tagsThatCollide)
+            if (other.tag == tag)
+            {
+                Collided();
+
+                return;
+            }
+    }
 }
