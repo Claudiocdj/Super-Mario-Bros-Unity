@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class DetectorComponent : MonoBehaviour
+public abstract class DetectorToInstantiate : MonoBehaviour
 {
     [SerializeField]
     protected GameObject[] detectorsPrefab;
@@ -29,5 +29,5 @@ public abstract class DetectorComponent : MonoBehaviour
         }
     }
 
-    protected abstract void OnTrigger();
+    protected abstract void OnTrigger(GameObject other);
 }

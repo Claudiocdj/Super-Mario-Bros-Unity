@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
 //depende de um objeto com rigidbody2D
-public class JumpInputs : DetectorComponent
+public class JumpInputs : DetectorToInstantiate
 {
     [SerializeField]
     protected bool canJump;
     [SerializeField]
     protected float jumpForce;
 
-    protected override void OnTrigger()
+    protected override void OnTrigger(GameObject other)
     {
         canJump = true;
     }

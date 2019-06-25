@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-public class ReverseMovement : DetectorComponent
+public class ReverseMovement : DetectorToInstantiate
 {
     public bool flipGameObject = true;
 
-    protected override void OnTrigger()
+    protected override void OnTrigger(GameObject other)
     {
         FlipCollidersComponents();
 

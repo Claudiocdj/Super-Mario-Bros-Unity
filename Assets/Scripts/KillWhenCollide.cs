@@ -1,17 +1,10 @@
 ﻿using UnityEngine;
 
-public class KillWhenCollide : MonoBehaviour
+public class KillWhenCollide : DetectorToInstantiate
 {
-    private string[] tagsWithCollide = new string[] { "Enemy" };
+    protected override void OnTrigger(GameObject other) {
+        Destroy( other.gameObject );
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        foreach (string tag in tagsWithCollide)
-            if (other.gameObject.tag == tag)
-            {
-                Destroy( other.gameObject );
-
-                Destroy( gameObject );
-            }
+        Destroy( gameObject );
     }
 }
