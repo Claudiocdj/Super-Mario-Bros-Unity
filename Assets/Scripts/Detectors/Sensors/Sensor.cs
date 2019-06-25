@@ -1,0 +1,20 @@
+﻿using System;
+using UnityEngine;
+
+public class Sensor : MonoBehaviour
+{
+    public string[] tagsWithCollide;
+
+    public event Action Sign = delegate { };
+
+    protected void Trigger(GameObject other)
+    {
+        foreach (string tag in tagsWithCollide)
+            if (other.gameObject.tag == tag)
+            {
+                Sign();
+
+                return;
+            }
+    }
+}
