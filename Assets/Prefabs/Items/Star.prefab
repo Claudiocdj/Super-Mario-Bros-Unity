@@ -184,6 +184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectorsPrefab:
-  - {fileID: 1859790287540455292, guid: 930f2016be10e9449958a0fecaa6161b, type: 3}
+  - {fileID: 3820961565503920759, guid: 49b5e6d33ea5ade4794bd0bd84dd3729, type: 3}
   tagWithCollide:
   - Player

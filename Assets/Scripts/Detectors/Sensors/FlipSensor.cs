@@ -12,6 +12,7 @@ public class FlipSensor : MonoBehaviour
 
     public void FlipColliderComponent()
     {
+        
         BoxCollider2D myBc = GetComponent<BoxCollider2D>();
 
         myBc.offset = new Vector2( myBc.offset.x * -1f, myBc.offset.y );

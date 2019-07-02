@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class OwnColliderDetector : MonoBehaviour
+public class OwnCircleColliderDetector : MonoBehaviour
 {
     private void Start()
     {
@@ -15,5 +15,7 @@ public class OwnColliderDetector : MonoBehaviour
         myCol.offset = parentCol.offset;
 
         myCol.radius = parentCol.radius;
+
+        parentCol.enabled = false;
     }
 }

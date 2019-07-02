@@ -11,7 +11,7 @@ public class ReverseMovement : DetectorToInstantiate
         ReverseMove();
 
         if(flipGameObject)
-        FlipGameObject();
+            FlipGameObject();
     }
 
     private void FlipCollidersComponents()
@@ -19,7 +19,7 @@ public class ReverseMovement : DetectorToInstantiate
         foreach (GameObject detector in detectors)
         {
             FlipSensor flipDetector = detector.GetComponent<FlipSensor>();
-
+            
             if(flipDetector != null)
                 flipDetector.FlipColliderComponent();
         }

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5701973415229318611}
   m_Layer: 0
   m_Name: FireBall
-  m_TagString: Untagged
+  m_TagString: FireBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfb44fef0bba4a4a8c4c82762eb4d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 7
   movingToTheLeft: 0
 --- !u!114 &5701973415229318605
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   tagWithCollide:
   - Ground
   canJump: 0
-  jumpForce: 250
+  jumpForce: 600
 --- !u!114 &5701973415229318604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectorsPrefab:
-  - {fileID: 1859790287540455292, guid: 930f2016be10e9449958a0fecaa6161b, type: 3}
+  - {fileID: 3820961565503920759, guid: 49b5e6d33ea5ade4794bd0bd84dd3729, type: 3}
   tagWithCollide:
   - Enemy
 --- !u!114 &5701973415229318611
