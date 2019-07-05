@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CollideWithMario : DetectorToInstantiate
 {
-    public event Action BricksEffect = delegate { };
+    public event Action<GameObject> BricksEffect = delegate { };
 
     protected override void OnTrigger(GameObject other)
     {
@@ -12,10 +12,6 @@ public class CollideWithMario : DetectorToInstantiate
         Vector2 myPos = transform.position;
 
         if (Mathf.Abs( otherPos.x - myPos.x ) < 0.8f && otherPos.y < myPos.y)
-        {
-            Debug.Log( "Mario bateu a cabeca" );
-
-            BricksEffect();
-        }
+            BricksEffect( other.gameObject );
     }
 }

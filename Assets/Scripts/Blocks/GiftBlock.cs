@@ -2,15 +2,27 @@
 
 public class GiftBlock : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject giftPrefab;
+
+    [SerializeField]
+    private GameObject blankBlockPrefab;
+
+    private void Awake()
     {
-        
+        GetComponent<CollideWithMario>().BricksEffect += GirfEffect;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GirfEffect(GameObject mario)
     {
-        
+        if (giftPrefab)
+        {
+            Instantiate( giftPrefab, transform.position + Vector3.up, Quaternion.identity );
+
+            if(blankBlockPrefab)
+                Instantiate( blankBlockPrefab, transform.position, Quaternion.identity );
+
+            Destroy( gameObject );
+        }
     }
 }

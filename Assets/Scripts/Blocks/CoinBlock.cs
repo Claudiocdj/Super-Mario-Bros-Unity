@@ -2,15 +2,13 @@
 
 public class CoinBlock : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        GetComponent<CollideWithMario>().BricksEffect += CoinEffect;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CoinEffect(GameObject mario)
     {
-        
+        Debug.Log( "plim" );
     }
 }
