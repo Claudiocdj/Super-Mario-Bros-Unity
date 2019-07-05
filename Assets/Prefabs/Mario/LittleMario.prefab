@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1408553694240115896}
   - component: {fileID: 1408553694240115899}
   - component: {fileID: 6423253001484895545}
+  - component: {fileID: 1180447958443605899}
   m_Layer: 11
   m_Name: LittleMario
   m_TagString: Player
@@ -216,3 +217,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectTime: 3
+--- !u!114 &1180447958443605899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408553694240115888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6ff4574f3e67d4a8bccddc8824e434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
