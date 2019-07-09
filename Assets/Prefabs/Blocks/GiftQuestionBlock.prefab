@@ -160,5 +160,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   giftPrefab: {fileID: 6099350444162124731, guid: 4244c4b56ca5c6e4896d92c3d33c24d3,
     type: 3}
-  blankBlock: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
+  blankBlockPrefab: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
     type: 3}
