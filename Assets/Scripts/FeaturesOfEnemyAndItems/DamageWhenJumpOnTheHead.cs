@@ -10,8 +10,16 @@ public class DamageWhenJumpOnTheHead : DetectorToInstantiate
         Vector2 otherPos = other.transform.position;
 
         Vector2 myPos = transform.position;
-        
-        if (Mathf.Abs( otherPos.x - myPos.x ) < 0.8f && otherPos.y > myPos.y)
+
+        if (other.GetComponent<StarEffect>().ItsStarEffect)
+        {
+            if (GetComponent<ScoreGiven>())
+                GetComponent<ScoreGiven>().SetScore();
+
+            Destroy( gameObject );
+        }
+
+        else if (Mathf.Abs( otherPos.x - myPos.x ) < 0.8f && otherPos.y > myPos.y)
         {
             other.gameObject.GetComponent<MarioAttackEffect>().AttackEffect();
 
@@ -20,6 +28,7 @@ public class DamageWhenJumpOnTheHead : DetectorToInstantiate
 
             DamageEnemy();
         }
+
         else
         {
             MarioInvensibleEffect marioInvensibleEffect = other.gameObject.

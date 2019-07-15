@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(ScoreGiven))]
 public class UpgradeToMario : DetectorToInstantiate
 {
     [SerializeField]

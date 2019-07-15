@@ -23,10 +23,12 @@ public class MarioDamage : MonoBehaviour
 
             MarioInvensibleEffect invensibleEffect = newMario.GetComponent<MarioInvensibleEffect>();
 
-            if(invensibleEffect)
+            if (invensibleEffect)
                 invensibleEffect.InvensibleEffect();
-        }
 
-        Destroy( gameObject );
+            Destroy( gameObject );
+        }
+        else if(GetComponent<MarioDeath>())
+            GetComponent<MarioDeath>().Active();
     }
 }

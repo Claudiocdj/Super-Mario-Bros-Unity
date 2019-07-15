@@ -158,7 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e027d8e3e31564fb2886aab2a91713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  giftPrefab: {fileID: 6099350444162124731, guid: 4244c4b56ca5c6e4896d92c3d33c24d3,
+  giftLevelOnePrefab: {fileID: 6099350444162124731, guid: 4244c4b56ca5c6e4896d92c3d33c24d3,
     type: 3}
-  blankBlock: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
+  giftLevelTwoPrefab: {fileID: 2740252478509955161, guid: bb5fc72fbcd0b164290b3cabdaae2925,
+    type: 3}
+  blankBlockPrefab: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
     type: 3}

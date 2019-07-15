@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2740252478509955164}
   - component: {fileID: 2740252478509955167}
   - component: {fileID: 2740252478509955166}
-  m_Layer: 0
+  - component: {fileID: 8296031456108820688}
+  m_Layer: 10
   m_Name: FireFlower
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,3 +138,18 @@ MonoBehaviour:
   - Player
   upgradePrefab: {fileID: 5472229559815909768, guid: 45842edd4ac03ff47bf9562635353bf7,
     type: 3}
+--- !u!114 &8296031456108820688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740252478509955161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ee6b15e4e6c084688417ae6ae87abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePopupPrefab: {fileID: 351201249192894531, guid: cf11b7dd569c2804ebb9a21325c5cc27,
+    type: 3}
+  scorePoints: 1000

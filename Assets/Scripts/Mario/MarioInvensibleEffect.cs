@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MarioInvensibleEffect : MonoBehaviour
 {
-    public bool IsInvensible { get; private set; }
+    public bool IsInvensible { get; set; }
 
     [SerializeField]
     private float effectTime = 3f;

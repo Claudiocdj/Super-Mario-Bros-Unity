@@ -3,23 +3,35 @@
 public class GiftBlock : MonoBehaviour
 {
     [SerializeField]
-    private GameObject giftPrefab;
+    private GameObject giftLevelOnePrefab;
+
+    [SerializeField]
+    private GameObject giftLevelTwoPrefab;
 
     [SerializeField]
     private GameObject blankBlockPrefab;
 
     private void Awake()
     {
-        GetComponent<CollideWithMario>().BricksEffect += GirfEffect;
+        GetComponent<CollideWithMario>().BricksEffect += GiftEffect;
     }
 
-    private void GirfEffect(GameObject mario)
+    private void GiftEffect(GameObject mario)
     {
-        if (giftPrefab)
-        {
-            Instantiate( giftPrefab, transform.position + Vector3.up, Quaternion.identity );
+        GameObject item = null;
 
-            if(blankBlockPrefab)
+        if( GameObject.Find("LittleMario") || GameObject.Find( "LittleMario(Clone)" ) )
+            item = giftLevelOnePrefab;
+        
+        else if (GameObject.Find( "Mario" ) || GameObject.Find( "Mario(Clone)" ) ||
+            GameObject.Find( "FireMario" ) || GameObject.Find( "FireMario(Clone)" ))
+            item = giftLevelTwoPrefab;
+        
+        if (item != null)
+        {
+            Instantiate( item, transform.position + Vector3.up, Quaternion.identity );
+
+            if (blankBlockPrefab)
                 Instantiate( blankBlockPrefab, transform.position, Quaternion.identity );
 
             Destroy( gameObject );
