@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6716331123377378473}
   - component: {fileID: 6716331123377378474}
   - component: {fileID: 1040979933528599054}
+  - component: {fileID: 5422089628296446128}
   m_Layer: 8
   m_Name: CoinQuestionBlock
   m_TagString: Ground
@@ -161,3 +162,18 @@ MonoBehaviour:
   blankBlockPrefab: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
     type: 3}
   coinsCount: 1
+--- !u!114 &5422089628296446128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716331123377378472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ee6b15e4e6c084688417ae6ae87abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePopupPrefab: {fileID: 351201249192894531, guid: cf11b7dd569c2804ebb9a21325c5cc27,
+    type: 3}
+  scorePoints: 200

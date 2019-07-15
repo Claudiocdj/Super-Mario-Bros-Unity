@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6099350444162124724}
   - component: {fileID: 6099350444162124730}
   - component: {fileID: 6099350444162124729}
+  - component: {fileID: 235102208436516662}
   m_Layer: 10
   m_Name: Mushroom
   m_TagString: Item
@@ -170,3 +171,18 @@ MonoBehaviour:
   - Player
   upgradePrefab: {fileID: 3642390563212024014, guid: 2f4944cd6b4cb394e8121fdfa7ce07a5,
     type: 3}
+--- !u!114 &235102208436516662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099350444162124731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ee6b15e4e6c084688417ae6ae87abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePopupPrefab: {fileID: 351201249192894531, guid: cf11b7dd569c2804ebb9a21325c5cc27,
+    type: 3}
+  scorePoints: 1000

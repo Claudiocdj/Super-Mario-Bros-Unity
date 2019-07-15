@@ -15,6 +15,9 @@ public class DamageWhenJumpOnTheHead : DetectorToInstantiate
         {
             other.gameObject.GetComponent<MarioAttackEffect>().AttackEffect();
 
+            if(GetComponent<ScoreGiven>())
+                GetComponent<ScoreGiven>().SetScore();
+
             DamageEnemy();
         }
         else

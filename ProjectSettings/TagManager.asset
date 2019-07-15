@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Item
   - FireBall
+  - Canvas
   layers:
   - Default
   - TransparentFX

@@ -16,8 +16,12 @@ public class CoinBlock : MonoBehaviour
     {
         Debug.Log( "plim" );
 
-        GameObject.FindWithTag( "Canvas" )
-            .GetComponent<CoinsController>().AddCoins( 1 );
+        GameObject canvas = GameObject.FindWithTag( "Canvas" );
+
+        canvas.GetComponent<CoinsController>().AddCoins( 1 );
+
+        if (GetComponent<ScoreGiven>())
+            GetComponent<ScoreGiven>().SetScore();
 
         coinsCount--;
 
