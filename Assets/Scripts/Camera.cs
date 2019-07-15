@@ -7,8 +7,13 @@ public class Camera : MonoBehaviour
     void Update()
     {
         if (player)
-            transform.position = new Vector3(player.transform.position.x,
-                transform.position.y, transform.position.z);
+        {
+            Vector3 newPos = new Vector3( player.transform.position.x,
+                transform.position.y, transform.position.z );
+
+            if (newPos.x > transform.position.x)
+                transform.position = newPos;
+        }
 
         else
             player = GameObject.FindWithTag( "Player" );

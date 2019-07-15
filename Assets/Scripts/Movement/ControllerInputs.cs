@@ -1,11 +1,22 @@
 ﻿using UnityEngine;
 
-public class ControllerInputs : MovementInputs
+public class ControllerInputs : MovementByRigidBody
 {
-    private void FixedUpdate()
-    {
-        Vector3 direction = Vector3.right * Input.GetAxis( "Horizontal" );
+    private Vector2 direction;
 
-        Move( direction );
+    public Vector2 vel;
+
+    private void Update()
+    {
+        vel = GetComponent<Rigidbody2D>().velocity;
+
+        if (Input.GetKey( KeyCode.LeftArrow ))
+            Move( Vector2.left );
+
+        else if (Input.GetKey( KeyCode.RightArrow ))
+            Move( Vector2.right );
+
+        else
+            Move( Vector2.zero );
     }
 }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5472229559815909761}
   - component: {fileID: 5472229559815909766}
   - component: {fileID: 5472229559815909767}
-  - component: {fileID: 5472229559815909764}
   - component: {fileID: 5472229559815909771}
   - component: {fileID: 5472229559815909770}
   - component: {fileID: 5472229559815909765}
@@ -20,6 +19,7 @@ GameObject:
   - component: {fileID: 98667181192984577}
   - component: {fileID: 550295916}
   - component: {fileID: 550295927}
+  - component: {fileID: 5959148754471674325}
   m_Layer: 11
   m_Name: FireMario
   m_TagString: Player
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 5
   m_Material: {fileID: 0}
@@ -110,32 +110,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &5472229559815909764
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5472229559815909768}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: ee2c13b1df2d13747b304ec643c4b5ff, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0043332577, y: 0.50084364}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.25}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 0.8125, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9993348, y: 1.9916589}
-  m_EdgeRadius: 0
 --- !u!114 &5472229559815909771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +127,7 @@ MonoBehaviour:
   tagWithCollide:
   - Ground
   canJump: 0
-  jumpForce: 1000
+  jumpForce: 1400
 --- !u!114 &5472229559815909770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  forceMult: 5
+  vel: {x: 0, y: 0}
 --- !u!114 &5472229559815909765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc56f5a7de232748aabda5245d315cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 400
+  jumpForce: 1200
 --- !u!114 &98667181192984577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,3 +221,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6ff4574f3e67d4a8bccddc8824e434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &5959148754471674325
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5472229559815909768}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: ee2c13b1df2d13747b304ec643c4b5ff, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0

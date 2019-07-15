@@ -1,12 +1,21 @@
 ﻿using UnityEngine;
 
-//depende de um objeto com rigidbody2D
+[RequireComponent(typeof(Rigidbody2D))]
 public class JumpInputs : DetectorToInstantiate
 {
     [SerializeField]
     protected bool canJump;
     [SerializeField]
     protected float jumpForce;
+
+    private Rigidbody2D rb;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     protected override void OnTrigger(GameObject other)
     {
@@ -17,9 +26,9 @@ public class JumpInputs : DetectorToInstantiate
     {
         if (canJump)
         {
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            rb.velocity = new Vector2( rb.velocity.x, 0f );
 
-            GetComponent<Rigidbody2D>().AddForce( Vector2.up * jumpForce );
+            rb.AddForce( Vector2.up * jumpForce );
 
             canJump = false;
         }

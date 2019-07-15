@@ -5,7 +5,10 @@ public class MarioUpgrade : MonoBehaviour
 
     public void Upgrade(GameObject upgradePrefab)
     {
-        Instantiate( upgradePrefab, transform.position, Quaternion.identity );
+        GameObject upgrade = Instantiate( upgradePrefab,
+            transform.position, Quaternion.identity );
+
+        upgrade.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
 
         Destroy( gameObject );
     }

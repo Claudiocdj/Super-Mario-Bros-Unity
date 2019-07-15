@@ -2,11 +2,11 @@
 
 public class MarioRun : MonoBehaviour
 {
-    private MovementInputs marioMovement;
+    private MovementByRigidBody marioMovement;
 
     private void Awake()
     {
-        marioMovement = GetComponent<MovementInputs>();
+        marioMovement = GetComponent<MovementByRigidBody>();
     }
 
     private void Update()

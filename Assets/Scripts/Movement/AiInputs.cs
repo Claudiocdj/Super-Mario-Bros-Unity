@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class AiInputs : MovementInputs
+public class AiInputs : MovementByTransform
 {
     public bool movingToTheLeft = true;
 

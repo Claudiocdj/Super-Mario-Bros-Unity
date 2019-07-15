@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1408553694240115897}
   - component: {fileID: 1408553694240115902}
   - component: {fileID: 1408553694240115903}
-  - component: {fileID: 1408553694240115900}
+  - component: {fileID: 1503199526170336901}
   - component: {fileID: 1408553694240115891}
   - component: {fileID: 1408553694240115890}
   - component: {fileID: 1408553694240115901}
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 5
   m_Material: {fileID: 0}
@@ -109,8 +109,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &1408553694240115900
-BoxCollider2D:
+--- !u!70 &1503199526170336901
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,19 +122,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0024924576}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 1}
-    newSize: {x: 0.8125, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.9950152}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.8125, y: 1}
+  m_Direction: 0
 --- !u!114 &1408553694240115891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +142,7 @@ MonoBehaviour:
   tagWithCollide:
   - Ground
   canJump: 0
-  jumpForce: 1000
+  jumpForce: 1400
 --- !u!114 &1408553694240115890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  forceMult: 5
+  vel: {x: 0, y: 0}
 --- !u!114 &1408553694240115901
 MonoBehaviour:
   m_ObjectHideFlags: 0

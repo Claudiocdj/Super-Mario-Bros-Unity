@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class MovementInputs : MonoBehaviour
+public abstract class MovementByTransform : MonoBehaviour
 {
     public float speed = 1f;
 
