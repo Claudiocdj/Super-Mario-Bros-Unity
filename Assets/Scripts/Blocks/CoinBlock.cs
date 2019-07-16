@@ -14,11 +14,9 @@ public class CoinBlock : MonoBehaviour
 
     private void CoinEffect(GameObject mario)
     {
-        Debug.Log( "plim" );
-
-        GameObject canvas = GameObject.FindWithTag( "Canvas" );
-
-        canvas.GetComponent<CoinsController>().AddCoins( 1 );
+        GameObject.FindWithTag( "Canvas" )
+            .GetComponent<CoinsController>()
+            .AddCoins( 1 );
 
         if (GetComponent<ScoreGiven>())
             GetComponent<ScoreGiven>().SetScore();

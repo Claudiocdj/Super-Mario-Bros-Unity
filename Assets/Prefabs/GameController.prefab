@@ -57,3 +57,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c85a7d6e64212439f0f7aef57fe024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackScreenTime: 3
+  gameOverScreenTime: 3

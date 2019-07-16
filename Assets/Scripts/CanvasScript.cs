@@ -14,4 +14,15 @@ public class CanvasScript : MonoBehaviour
 
         DontDestroyOnLoad( gameObject );
     }
+
+    public void ResetCanvas()
+    {
+        GetComponent<ScoreController>().ResetScore();
+
+        GetComponent<TimeController>().StopTimer();
+
+        GetComponent<CoinsController>().ResetCoins();
+
+        GetComponent<MapController>().mapName = "1-1";
+    }
 }

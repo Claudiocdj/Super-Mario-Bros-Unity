@@ -66,18 +66,23 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene( "GameOverScreen" );
 
-        GameObject.FindWithTag( "Canvas" )
-            .GetComponent<TimeController>()
-            .StopTimer();
+        ResetGame();
 
         StartCoroutine( GameOverTimer() );
+    }
+
+    private void ResetGame()
+    {
+        GameObject.FindWithTag( "Canvas" )
+            .GetComponent<CanvasScript>()
+            .ResetCanvas();
+
+        GetComponent<LivesController>().ResetLives();
     }
 
     private IEnumerator GameOverTimer()
     {
         yield return new WaitForSeconds( gameOverScreenTime );
-
-        GetComponent<LivesController>().ResetLives();
 
         SceneManager.LoadScene( "FirstScene" );
     }

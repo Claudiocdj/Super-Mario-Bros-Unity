@@ -25,7 +25,16 @@ public class CoinsController : MonoBehaviour
 
         else if(n >= 100)
         {
-            //add vida
+            GameObject.FindWithTag( "GameController" )
+                .GetComponent<LivesController>()
+                .AddsLife();
+
+            ResetCoins();
         }
+    }
+
+    public void ResetCoins()
+    {
+        coinsText.text = "00";
     }
 }
