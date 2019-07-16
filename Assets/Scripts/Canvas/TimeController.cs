@@ -1,4 +1,5 @@
-﻿using UnityEngine.UI;
+﻿using System.Collections;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class TimeController : MonoBehaviour
@@ -6,32 +7,52 @@ public class TimeController : MonoBehaviour
     [SerializeField]
     private Text timeText;
 
-    private float timer;
+    [SerializeField]
+    private int time;
+
+    public bool pauseCounter = false;
+
+    private Coroutine cr = null;
 
     private void Awake()
     {
-        timeText.text = "400";
-
-        timer = 0f;
+        timeText.text = time.ToString();
     }
 
-    private void Update()
+    public void StartCounter()
     {
-        timer += Time.deltaTime;
+        if (cr != null)
+            StopCoroutine( cr );
+        
+        cr = StartCoroutine( StartCounterCoroutine() );
+    }
 
-        if(timer >= 1f)
+    public void StopTimer()
+    {
+        if (cr != null)
+            StopCoroutine( cr );
+
+        timeText.text = "400";
+    }
+
+    private IEnumerator StartCounterCoroutine()
+    {
+
+        int timer = time;
+
+        while (timer >= 0)
         {
-            if(int.Parse( timeText.text ) - 1f < 0f)
-                TimesUp();
+            if (pauseCounter)
+                continue;
 
-            else
-            {
-                timeText.text = ( int.Parse( timeText.text ) - 1f ).ToString();
+            timeText.text = timer.ToString();
 
-                timer = 0f;
-            }
-            
+            yield return new WaitForSeconds( 1f );
+
+            timer--;
         }
+
+        TimesUp();
     }
 
     private void TimesUp()

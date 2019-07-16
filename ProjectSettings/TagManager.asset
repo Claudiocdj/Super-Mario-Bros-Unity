@@ -9,6 +9,8 @@ TagManager:
   - Item
   - FireBall
   - Canvas
+  - SceneController
+  - BlackScreen
   layers:
   - Default
   - TransparentFX
