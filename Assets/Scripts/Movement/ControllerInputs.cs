@@ -6,14 +6,22 @@ public class ControllerInputs : MovementByRigidBody
 
     public Vector2 vel;
 
+    public bool InputRight { get; private set; }
+
+    public bool InputLeft { get; private set; }
+
     private void Update()
     {
         vel = GetComponent<Rigidbody2D>().velocity;
 
-        if (Input.GetKey( KeyCode.LeftArrow ))
+        InputRight = Input.GetKey( KeyCode.RightArrow );
+
+        InputLeft = Input.GetKey( KeyCode.LeftArrow );
+
+        if (InputLeft)
             Move( Vector2.left );
 
-        else if (Input.GetKey( KeyCode.RightArrow ))
+        else if (InputRight)
             Move( Vector2.right );
 
         else

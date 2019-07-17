@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DieOnDamage : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject deadEnemyPrefab;
+
     private void Awake()
     {
         GetComponent<DamageWhenJumpOnTheHead>().DamageEnemy += DestroyEnemy;
@@ -11,6 +14,8 @@ public class DieOnDamage : MonoBehaviour
 
     private void DestroyEnemy()
     {
+        Instantiate( deadEnemyPrefab, transform.position, Quaternion.identity );
+
         Destroy( gameObject );
     }
 }

@@ -10,6 +10,8 @@ public class JumpInputs : DetectorToInstantiate
 
     private Rigidbody2D rb;
 
+    public bool IsJumping { get; private set; }
+
     protected override void Awake()
     {
         base.Awake();
@@ -20,18 +22,21 @@ public class JumpInputs : DetectorToInstantiate
     protected override void OnTrigger(GameObject other)
     {
         canJump = true;
+
+        IsJumping = false;
     }
 
     protected void Jump()
     {
-        if (canJump)
+        if (canJump && rb.velocity.y == 0)
         {
+            IsJumping = true;
+
             rb.velocity = new Vector2( rb.velocity.x, 0f );
 
             rb.AddForce( Vector2.up * jumpForce );
 
             canJump = false;
-        }
-            
+        }  
     }
 }

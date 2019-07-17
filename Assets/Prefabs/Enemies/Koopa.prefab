@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5675548637446617972}
   - component: {fileID: 5675548637446617961}
   - component: {fileID: 7711540074970209623}
+  - component: {fileID: 65428407012588234}
   m_Layer: 9
   m_Name: Koopa
   m_TagString: Enemy
@@ -200,3 +201,22 @@ MonoBehaviour:
   scorePopupPrefab: {fileID: 351201249192894531, guid: cf11b7dd569c2804ebb9a21325c5cc27,
     type: 3}
   scorePoints: 100
+--- !u!95 &65428407012588234
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675548637446617969}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6146a53c73d80743b5a35608a2c7c62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
