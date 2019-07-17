@@ -13,6 +13,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private int gameOverScreenTime = 3;
 
+    [SerializeField]
+    private int winScreenTime = 3;
+
     private void Awake()
     {
         if (instance == null)
@@ -71,6 +74,11 @@ public class GameController : MonoBehaviour
         StartCoroutine( GameOverTimer() );
     }
 
+    public void Win()
+    {
+        StartCoroutine( WinTimer() );
+    }
+
     private void ResetGame()
     {
         GameObject.FindWithTag( "Canvas" )
@@ -83,6 +91,15 @@ public class GameController : MonoBehaviour
     private IEnumerator GameOverTimer()
     {
         yield return new WaitForSeconds( gameOverScreenTime );
+
+        SceneManager.LoadScene( "FirstScene" );
+    }
+
+    private IEnumerator WinTimer()
+    {
+        yield return new WaitForSeconds( winScreenTime );
+
+        ResetGame();
 
         SceneManager.LoadScene( "FirstScene" );
     }

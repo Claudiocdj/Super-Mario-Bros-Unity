@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,5 +44,37 @@ public class ScoreController : MonoBehaviour
         scoreText.text = "000000";
 
         score = 0;
+    }
+
+    public void Win()
+    {
+        StartCoroutine( WinScoreEffect() );
+    }
+
+    private IEnumerator WinScoreEffect()
+    {
+        TimeController time = GetComponent<TimeController>();
+
+        int currentTime = time.GetCurrentTime();
+
+        time.StopTimer();
+
+        for (int i = 0; i < currentTime - (currentTime % 5); i+=5)
+        {
+            AddScore( 50 * 5);
+
+            time.SetTimeText( currentTime - i );
+
+            yield return new WaitForSeconds( 0.01f );
+        }
+
+        for(int i = 0; i <= currentTime % 5; i++)
+        {
+            AddScore( 50 );
+
+            time.SetTimeText( (currentTime % 5) - i );
+
+            yield return new WaitForSeconds( 0.01f );
+        }
     }
 }

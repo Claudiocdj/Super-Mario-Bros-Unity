@@ -86,6 +86,7 @@ TextureImporter:
     21300162: AllSprites_81
     21300164: AllSprites_82
     21300166: AllSprites_83
+    21300168: AllSprites_84
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -1836,13 +1837,33 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 504ef09a553036342a677dbaa33ae634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllSprites_84
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1040
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a2847f19a667b4989010649794e0be
       vertices: []
       indices: 
       edges: []

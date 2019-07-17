@@ -10,9 +10,9 @@ public class TimeController : MonoBehaviour
     [SerializeField]
     private int time;
 
-    public bool pauseCounter = false;
-
     private Coroutine cr = null;
+
+    private int pausedTime;
 
     private void Awake()
     {
@@ -42,9 +42,6 @@ public class TimeController : MonoBehaviour
 
         while (timer >= 0)
         {
-            if (pauseCounter)
-                continue;
-
             timeText.text = timer.ToString();
 
             yield return new WaitForSeconds( 1f );
@@ -62,5 +59,15 @@ public class TimeController : MonoBehaviour
 
         if (marioDeath)
             marioDeath.Active();
+    }
+
+    public int GetCurrentTime()
+    {
+        return int.Parse( timeText.text );
+    }
+
+    public void SetTimeText(int num)
+    {
+        timeText.text = num.ToString();
     }
 }
