@@ -5,6 +5,7 @@ public class JumpInputs : DetectorToInstantiate
 {
     [SerializeField]
     protected bool canJump;
+
     [SerializeField]
     protected float jumpForce;
 
@@ -26,11 +27,15 @@ public class JumpInputs : DetectorToInstantiate
         IsJumping = false;
     }
 
-    protected void Jump()
+    protected void Jump(GameObject obj)
     {
         if (canJump && rb.velocity.y == 0)
         {
             IsJumping = true;
+
+            if(obj.tag == "Player")
+                GameObject.FindWithTag("SoundClips")
+                .GetComponent<SoundClips>().Jump();
 
             rb.velocity = new Vector2( rb.velocity.x, 0f );
 

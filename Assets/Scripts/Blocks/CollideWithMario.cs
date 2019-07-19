@@ -12,6 +12,8 @@ public class CollideWithMario : DetectorToInstantiate
         Vector2 myPos = transform.position;
 
         if (Mathf.Abs( otherPos.x - myPos.x ) < 0.8f && otherPos.y < myPos.y)
+        {
             BricksEffect( other.gameObject );
+        }
     }
 }

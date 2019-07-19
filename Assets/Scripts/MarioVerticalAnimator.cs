@@ -24,7 +24,6 @@ public class MarioVerticalAnimator : MonoBehaviour
     {
         if(Mathf.Abs(rb.velocity.y) > 0.1f)
         {
-            Debug.Log( rb.velocity.y );
             if (controller.IsJumping)
                 an.SetBool( "isJumping", true );
 

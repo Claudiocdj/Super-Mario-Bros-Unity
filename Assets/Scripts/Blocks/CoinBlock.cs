@@ -14,6 +14,10 @@ public class CoinBlock : MonoBehaviour
 
     private void CoinEffect(GameObject mario)
     {
+        GameObject.FindWithTag( "SoundClips" )
+                .GetComponent<SoundClips>()
+                .Coin();
+
         GameObject.FindWithTag( "Canvas" )
             .GetComponent<CoinsController>()
             .AddCoins( 1 );

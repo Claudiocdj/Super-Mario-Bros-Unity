@@ -251,6 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1befa86145330c743ad0c822ff0b14b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadMarioPrefab: {fileID: 1276970352182193774, guid: e0b61376f9cbfff40afdd47dcf1430ad,
+    type: 3}
 --- !u!95 &1585120506
 Animator:
   serializedVersion: 3

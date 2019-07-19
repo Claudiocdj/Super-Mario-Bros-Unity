@@ -8,4 +8,14 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: FireMario
   m_Controller: {fileID: 9100000, guid: 5ea10e5533b18e7438b33fec9840b978, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a60ae3562d33ad749b2480fcbd9bfedf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f4a872809ba7f4148b7709a8aab44486, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4ff0fd7a5f6a52a48b910eab33dbadd5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4fd4ee4527e50a04287a323aa17d6e54, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7ccd17ca4f2ca4b458f65a0c14faab46, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8f1106f4b6ab1494dafbc65df37652ce, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 301abcb0b0c734b49b799a0c27b14950, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4c652cbabcdc06346a8bdb49453e85bb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0b7d0e6daba9bad498627bdf13e83c8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4acaf33393d0cbe44b5e86754fd5c29a, type: 2}

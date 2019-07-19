@@ -7,5 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: KoopaAnimator
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 26c2b5090de7d874eb6bf391b7880648, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0b68219f7f38e8446a648f615465225b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a9f9a38e8f228654d9588b38a42120bd, type: 2}
