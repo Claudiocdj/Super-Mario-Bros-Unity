@@ -9,6 +9,9 @@ public class MarioInvensibleEffect : MonoBehaviour
     [SerializeField]
     private float effectTime = 3f;
 
+    [SerializeField]
+    private AudioClip powerDownClip;
+
     private void Awake()
     {
         IsInvensible = false;
@@ -21,6 +24,8 @@ public class MarioInvensibleEffect : MonoBehaviour
 
     private IEnumerator InvensibleEffectCoroutine()
     {
+        SetAudio();
+
         IsInvensible = true;
 
         SpriteRenderer mySprite = GetComponent<SpriteRenderer>();
@@ -39,5 +44,15 @@ public class MarioInvensibleEffect : MonoBehaviour
         }
 
         IsInvensible = false;
+    }
+
+    private void SetAudio()
+    {
+
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.clip = powerDownClip;
+
+        audio.Play();
     }
 }

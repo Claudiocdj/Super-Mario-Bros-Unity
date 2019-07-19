@@ -190,7 +190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   littleMarioPrefab: {fileID: 0}
-  powerDownClip: {fileID: 0}
 --- !u!114 &1408553694240115899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectTime: 3
+  powerDownClip: {fileID: 8300000, guid: 200ea2376b834e742ac7b58eac7a9cd8, type: 3}
 --- !u!114 &1180447958443605899
 MonoBehaviour:
   m_ObjectHideFlags: 0

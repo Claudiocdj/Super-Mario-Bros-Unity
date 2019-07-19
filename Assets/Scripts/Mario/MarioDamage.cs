@@ -5,9 +5,6 @@ public class MarioDamage : MonoBehaviour
     [SerializeField]
     private GameObject littleMarioPrefab;
 
-    [SerializeField]
-    private AudioClip powerDownClip;
-
     private bool isLittleMario = false;
 
     private void Awake()
@@ -21,7 +18,6 @@ public class MarioDamage : MonoBehaviour
     {
         if (!isLittleMario && littleMarioPrefab)
         {
-            SetAudio();
 
             GameObject newMario = Instantiate( littleMarioPrefab, transform.position,
                                                 Quaternion.identity );
@@ -35,17 +31,5 @@ public class MarioDamage : MonoBehaviour
         }
         else if(GetComponent<MarioDeath>())
             GetComponent<MarioDeath>().Active();
-    }
-
-    private void SetAudio()
-    {
-        
-        AudioSource audio = GetComponent<AudioSource>();
-
-        audio.clip = powerDownClip;
-
-        audio.Play();
-        Debug.Log( audio );
-
     }
 }

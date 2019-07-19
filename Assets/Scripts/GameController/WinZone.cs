@@ -12,6 +12,8 @@ public class WinZone : MonoBehaviour
 
             GetComponent<AudioSource>().Play();
 
+            GameObject.FindWithTag( "SoundClips" ).GetComponent<AudioSource>().Stop();
+
             GameObject.FindWithTag( "Canvas" )
                 .GetComponent<ScoreController>()
                 .Win();

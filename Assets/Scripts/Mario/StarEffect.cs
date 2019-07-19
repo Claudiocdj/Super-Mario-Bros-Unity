@@ -26,6 +26,10 @@ public class StarEffect : MonoBehaviour
     {
         ItsStarEffect = true;
 
+        GameObject.FindWithTag( "SoundClips" )
+            .GetComponent<AudioController>()
+            .PlayStarTheme();
+
         GetComponent<MarioInvensibleEffect>().IsInvensible = true;
 
         SpriteRenderer mySprite = GetComponent<SpriteRenderer>();
@@ -46,6 +50,10 @@ public class StarEffect : MonoBehaviour
         }
 
         GetComponent<MarioInvensibleEffect>().IsInvensible = false;
+
+        GameObject.FindWithTag( "SoundClips" )
+            .GetComponent<AudioController>()
+            .StopStarTheme();
 
         ItsStarEffect = false;
     }

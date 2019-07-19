@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276970352182193773}
   - component: {fileID: 1965784746980509912}
+  - component: {fileID: 2506100711478987763}
   m_Layer: 0
   m_Name: DeadMarioAnim
   m_TagString: Untagged
@@ -128,6 +129,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2506100711478987763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276970352182193774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05bc25e4e54dfb45b61870a02e4ca0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276970353939121182
 GameObject:
   m_ObjectHideFlags: 0
