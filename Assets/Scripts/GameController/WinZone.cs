@@ -10,7 +10,8 @@ public class WinZone : MonoBehaviour
         {
             DesablePlayerInputs();
 
-            
+            GetComponent<AudioSource>().Play();
+
             GameObject.FindWithTag( "Canvas" )
                 .GetComponent<ScoreController>()
                 .Win();

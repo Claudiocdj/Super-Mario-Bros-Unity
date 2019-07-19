@@ -3,8 +3,9 @@
 public class KillWhenCollide : DetectorToInstantiate
 {
     protected override void OnTrigger(GameObject other) {
-        Destroy( other.gameObject );
 
-        Destroy( gameObject );
+        other.GetComponent<DieByFireBall>().DestroyEnemy();
+
+        GetComponent<FireBallDie>().DestroyFireBall();
     }
 }

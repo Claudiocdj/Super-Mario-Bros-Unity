@@ -160,4 +160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blankBlockPrefab: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
     type: 3}
+  coinBlockEffectPrefab: {fileID: 4924968128317967960, guid: fab1e5370f3fa5b4ca738def656cd709,
+    type: 3}
   coinsCount: 9

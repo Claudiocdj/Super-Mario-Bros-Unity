@@ -11,6 +11,10 @@ public class GiftBlock : MonoBehaviour
     [SerializeField]
     private GameObject blankBlockPrefab;
 
+    [SerializeField]
+    private GameObject summonGiftEffectPrefab;
+
+
     private void Awake()
     {
         GetComponent<CollideWithMario>().BricksEffect += GiftEffect;
@@ -18,23 +22,35 @@ public class GiftBlock : MonoBehaviour
 
     private void GiftEffect(GameObject mario)
     {
-        GameObject item = null;
-
-        if( GameObject.Find("LittleMario") || GameObject.Find( "LittleMario(Clone)" ) )
-            item = giftLevelOnePrefab;
-        
-        else if (GameObject.Find( "Mario" ) || GameObject.Find( "Mario(Clone)" ) ||
-            GameObject.Find( "FireMario" ) || GameObject.Find( "FireMario(Clone)" ))
-            item = giftLevelTwoPrefab;
+        GameObject item = SelectGift();
         
         if (item != null)
         {
-            Instantiate( item, transform.position + Vector3.up, Quaternion.identity );
+            InstantiateSummonAnimation(item);
 
             if (blankBlockPrefab)
                 Instantiate( blankBlockPrefab, transform.position, Quaternion.identity );
 
             Destroy( gameObject );
         }
+    }
+
+    private GameObject SelectGift()
+    {
+        if (GameObject.Find( "LittleMario" ) || GameObject.Find( "LittleMario(Clone)" ))
+            return giftLevelOnePrefab;
+
+        else if (GameObject.Find( "Mario" ) || GameObject.Find( "Mario(Clone)" ) ||
+            GameObject.Find( "FireMario" ) || GameObject.Find( "FireMario(Clone)" ))
+            return giftLevelTwoPrefab;
+
+        return null;
+    }
+
+    private void InstantiateSummonAnimation(GameObject item)
+    {
+        GameObject n = Instantiate( summonGiftEffectPrefab, transform.position, Quaternion.identity );
+
+        n.GetComponent<SummonGiftEffect>().SetGift( item );
     }
 }

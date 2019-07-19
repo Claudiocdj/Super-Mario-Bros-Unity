@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4495316295538570745}
   - component: {fileID: 4495316295538570746}
   - component: {fileID: 4495316295538570750}
+  - component: {fileID: 286864195773277559}
   m_Layer: 8
   m_Name: GiftQuestionBlock
   m_TagString: Ground
@@ -164,3 +165,24 @@ MonoBehaviour:
     type: 3}
   blankBlockPrefab: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
     type: 3}
+  summonGiftEffectPrefab: {fileID: 6537580293819647280, guid: 9c7e164053b7ce24889fa3e4a777a389,
+    type: 3}
+--- !u!95 &286864195773277559
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495316295538570744}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c7b5e47930fd5d43a2457d02a8e5f05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

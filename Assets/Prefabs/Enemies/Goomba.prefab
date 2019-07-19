@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4908274870070817676}
   - component: {fileID: 4908274870070817714}
   - component: {fileID: 4908274870070817677}
+  - component: {fileID: 1886751908557334832}
   - component: {fileID: 1254474567763051332}
   - component: {fileID: 5245618691981474995}
   m_Layer: 9
@@ -185,6 +186,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadEnemyPrefab: {fileID: 457122063417532564, guid: bfad077cfe0bce84bac900bf82c960f3,
+    type: 3}
+--- !u!114 &1886751908557334832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908274870070817674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11529b776bb42a74bbb7e05d0fdb31fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadEnemyPrefab: {fileID: 5653814419820163513, guid: b75e17e5f28796449ae88d68971eb657,
     type: 3}
 --- !u!114 &1254474567763051332
 MonoBehaviour:

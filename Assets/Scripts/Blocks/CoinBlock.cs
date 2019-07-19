@@ -5,6 +5,8 @@ public class CoinBlock : MonoBehaviour
     [SerializeField]
     private GameObject blankBlockPrefab;
     [SerializeField]
+    private GameObject coinBlockEffectPrefab;
+    [SerializeField]
     private int coinsCount = 1;
 
     private void Awake()
@@ -14,9 +16,7 @@ public class CoinBlock : MonoBehaviour
 
     private void CoinEffect(GameObject mario)
     {
-        GameObject.FindWithTag( "SoundClips" )
-                .GetComponent<SoundClips>()
-                .Coin();
+        Instantiate( coinBlockEffectPrefab, transform.position, Quaternion.identity );
 
         GameObject.FindWithTag( "Canvas" )
             .GetComponent<CoinsController>()

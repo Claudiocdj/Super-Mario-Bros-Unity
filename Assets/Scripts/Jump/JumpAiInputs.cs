@@ -2,6 +2,6 @@
 {
     private void FixedUpdate()
     {
-        Jump(gameObject);
+        Jump();
     }
 }

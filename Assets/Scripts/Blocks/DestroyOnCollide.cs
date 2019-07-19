@@ -2,6 +2,12 @@
 
 public class DestroyOnCollide : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject breakingBlock;
+
+    [SerializeField]
+    private AudioClip bumpSound;
+
     private void Awake()
     {
         GetComponent<CollideWithMario>().BricksEffect += DestroyEffect;
@@ -12,17 +18,26 @@ public class DestroyOnCollide : MonoBehaviour
         if (mario.name == "Mario" || mario.name == "Mario(Clone)" ||
             mario.name == "FireMario" || mario.name == "FireMario(Clone)")
         {
-            GameObject.FindWithTag( "SoundClips" )
-                .GetComponent<SoundClips>()
-                .BreakBlock();
+            Instantiate( breakingBlock, transform.position, Quaternion.identity );
 
             Destroy( gameObject );
         }
         else
         {
-            GameObject.FindWithTag( "SoundClips" )
-                .GetComponent<SoundClips>()
-                .Bump();
+            if (bumpSound)
+                SetAudio( bumpSound );
+        }
+    }
+
+    private void SetAudio(AudioClip clip)
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        if (audio)
+        {
+            audio.clip = clip;
+
+            audio.Play();
         }
     }
 }

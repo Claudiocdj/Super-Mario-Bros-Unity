@@ -9,6 +9,9 @@ public class JumpInputs : DetectorToInstantiate
     [SerializeField]
     protected float jumpForce;
 
+    [SerializeField]
+    protected AudioClip audioJump;
+
     private Rigidbody2D rb;
 
     public bool IsJumping { get; private set; }
@@ -27,15 +30,14 @@ public class JumpInputs : DetectorToInstantiate
         IsJumping = false;
     }
 
-    protected void Jump(GameObject obj)
+    protected void Jump()
     {
         if (canJump && rb.velocity.y == 0)
         {
             IsJumping = true;
 
-            if(obj.tag == "Player")
-                GameObject.FindWithTag("SoundClips")
-                .GetComponent<SoundClips>().Jump();
+            if(audioJump != null)
+                SetSound();
 
             rb.velocity = new Vector2( rb.velocity.x, 0f );
 
@@ -43,5 +45,14 @@ public class JumpInputs : DetectorToInstantiate
 
             canJump = false;
         }  
+    }
+
+    private void SetSound()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.clip = audioJump;
+
+        audio.Play();
     }
 }

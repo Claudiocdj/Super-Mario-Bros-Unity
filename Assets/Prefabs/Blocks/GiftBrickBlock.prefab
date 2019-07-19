@@ -164,3 +164,5 @@ MonoBehaviour:
     type: 3}
   blankBlockPrefab: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
     type: 3}
+  summonGiftEffectPrefab: {fileID: 6537580293819647280, guid: 9c7e164053b7ce24889fa3e4a777a389,
+    type: 3}

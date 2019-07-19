@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6716331123377378474}
   - component: {fileID: 1040979933528599054}
   - component: {fileID: 5422089628296446128}
+  - component: {fileID: 721014003827046522}
   m_Layer: 8
   m_Name: CoinQuestionBlock
   m_TagString: Ground
@@ -161,6 +162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blankBlockPrefab: {fileID: 2383495508132433480, guid: 599b533baab4e0f449c66f4fbc701baf,
     type: 3}
+  coinBlockEffectPrefab: {fileID: 4924968128317967960, guid: fab1e5370f3fa5b4ca738def656cd709,
+    type: 3}
   coinsCount: 1
 --- !u!114 &5422089628296446128
 MonoBehaviour:
@@ -177,3 +180,22 @@ MonoBehaviour:
   scorePopupPrefab: {fileID: 351201249192894531, guid: cf11b7dd569c2804ebb9a21325c5cc27,
     type: 3}
   scorePoints: 200
+--- !u!95 &721014003827046522
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716331123377378472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c7b5e47930fd5d43a2457d02a8e5f05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -493,6 +493,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7904659277921397250, guid: 1a7464ebc44cc2249ab6e745d23de8c5,
+        type: 3}
+      propertyPath: initialLives
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297327422176006795, guid: 1a7464ebc44cc2249ab6e745d23de8c5,
+        type: 3}
+      propertyPath: gameOverScreenTime
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a7464ebc44cc2249ab6e745d23de8c5, type: 3}
 --- !u!1001 &1449251926
